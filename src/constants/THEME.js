@@ -58,13 +58,13 @@ export const COLORS = {
 
 //SIZES COLLECTIONS
 export const SIZES = {
-  // global sizes
+  // GLOBAL SIZES
   base: 8,
   font: 14,
   radius: 12,
   padding: '5%',
 
-  // font sizes
+  // FONT SIZES
   largeTitle: 40,
   h1: 30,
   h2: 22,
@@ -77,7 +77,7 @@ export const SIZES = {
   body4: 16,
   body5: 12,
 
-  // app dimensions
+  //APP DIMENSIONS
   width,
   height,
 };
@@ -139,6 +139,7 @@ export const NBTheme = extendTheme({
     initialColorMode: 'light',
   },
 });
+
 //REACT NAVIGATION
 export const RNTheme = {
   ...DefaultTheme,

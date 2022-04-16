@@ -546,7 +546,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = XMAD6V5656;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = boilerplate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -558,7 +558,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.siddsboilerplate.app;
+				PRODUCT_BUNDLE_IDENTIFIER = com.siddsRN.app;
 				PRODUCT_NAME = boilerplate;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -576,7 +576,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = XMAD6V5656;
 				INFOPLIST_FILE = boilerplate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -587,7 +587,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.siddsboilerplate.app;
+				PRODUCT_BUNDLE_IDENTIFIER = com.siddsRN.app;
 				PRODUCT_NAME = boilerplate;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
