@@ -1,5 +1,5 @@
 import {createSlice, createAsyncThunk} from '@reduxjs/toolkit';
-import {setAccessToken, clearAccessToken, getAccessToken} from './../../utils';
+import {setAccessToken, clearAccessToken, getAccessToken} from '@/utils';
 const initialState = {
   accessToken: null,
   isLoading: true,
@@ -12,6 +12,10 @@ export const authIsLogedIn = createAsyncThunk('authIsLogedIn', async () => {
 });
 
 export const login = createAsyncThunk('login', async tokens => {
+  return tokens;
+});
+
+export const register = createAsyncThunk('login', async tokens => {
   return tokens;
 });
 
@@ -36,6 +40,14 @@ export const authSlice = createSlice({
       state.isLoading = true;
     },
     [login.fulfilled]: (state, action) => {
+      setAccessToken(action.payload.accessToken);
+      state.accessToken = action.payload.accessToken;
+      state.isLoading = false;
+    },
+    [register.pending]: (state, action) => {
+      state.isLoading = true;
+    },
+    [register.fulfilled]: (state, action) => {
       setAccessToken(action.payload.accessToken);
       state.accessToken = action.payload.accessToken;
       state.isLoading = false;

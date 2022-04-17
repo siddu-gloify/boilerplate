@@ -2,7 +2,7 @@ import {Button, View, Text} from 'native-base';
 import React from 'react';
 import {useDispatch} from 'react-redux';
 import {TouchableOpacity} from 'react-native-gesture-handler';
-import {FONTS, WP} from './../../constants';
+import {FONTS, WP} from '@/constants';
 import {logout} from './../../redux/reducers/authReducer';
 
 import Config from 'react-native-config';
