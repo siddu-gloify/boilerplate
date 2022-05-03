@@ -11,6 +11,7 @@ export const store = configureStore({
   },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({serializableCheck: false}).concat(authAPI.middleware),
+  devTools: true,
 });
 
 setupListeners(store.dispatch);

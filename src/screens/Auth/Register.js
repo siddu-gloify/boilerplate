@@ -1,3 +1,4 @@
+import {Loader} from '@/components';
 import {useSignUpMutation} from '@/redux/services';
 import React from 'react';
 import {View, Text, Button} from 'react-native';
@@ -34,11 +35,7 @@ const Register = ({navigation}) => {
       <Text>{requestBody.password}</Text>
 
       <Button title="Register now" onPress={() => signUpAPI(requestBody)} />
-      {APIResponse.isLoading ? (
-        <Text>Loading.....</Text>
-      ) : (
-        <Text>Not Loading</Text>
-      )}
+      {APIResponse.isLoading ? <Loader /> : <Text>Not Loading</Text>}
     </View>
   );
 };

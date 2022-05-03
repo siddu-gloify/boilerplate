@@ -2,17 +2,15 @@ import {Button, View, Text} from 'native-base';
 import React from 'react';
 import {useDispatch} from 'react-redux';
 import {TouchableOpacity} from 'react-native-gesture-handler';
-import {FONTS, WP} from '@/constants';
+import {CONFIG, FONTS, WP} from '@/constants';
 import {logout} from './../../redux/reducers/authReducer';
-
-import Config from 'react-native-config';
 
 const Screen2 = ({navigation}) => {
   return (
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
       <Text style={FONTS.h2}>Screen2</Text>
       <TouchableOpacity onPress={() => navigation.openDrawer()}>
-        <Text>Open Drawer {Config.ENVIRONMENT} </Text>
+        <Text>Open Drawer {CONFIG.ENV} </Text>
       </TouchableOpacity>
       <Button colorScheme="primary">Success</Button>
     </View>

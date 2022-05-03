@@ -1,3 +1,4 @@
+import {Loader} from '@/components';
 import {useSignInMutation} from '@/redux/services';
 import React from 'react';
 import {View, Text, Button} from 'react-native';
@@ -20,7 +21,6 @@ const Login = ({navigation}) => {
     } else if (APIResponse.isSuccess) {
       console.log('APIResponse', APIResponse);
       if (APIResponse.data.data.code == 0) {
-        alert(APIResponse.data.data.message);
         dispatch(login({accessToken: APIResponse.data.data.data.Token}));
       } else {
         alert(APIResponse.data.data.message);
@@ -40,11 +40,7 @@ const Login = ({navigation}) => {
 
       <Text>{requestBody.email}</Text>
       <Text>{requestBody.password}</Text>
-      {APIResponse.isLoading ? (
-        <Text>Loading.....</Text>
-      ) : (
-        <Text>Not Loading</Text>
-      )}
+      {APIResponse.isLoading ? <Loader /> : <Text>Not Loading</Text>}
     </View>
   );
 };
