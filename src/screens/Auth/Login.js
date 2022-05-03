@@ -1,4 +1,5 @@
 import {Loader} from '@/components';
+import {CONFIG} from '@/constants';
 import {useSignInMutation} from '@/redux/services';
 import React from 'react';
 import {View, Text, Button} from 'react-native';
@@ -31,13 +32,15 @@ const Login = ({navigation}) => {
   return (
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
       {APIResponse.isLoading && <Text>Loading </Text>}
+      <Text>
+        ENV : {CONFIG.ENV} - {CONFIG.APIBASEURL}
+      </Text>
       <Text>Login</Text>
       <Button title="Login now" onPress={() => signInAPI(requestBody)} />
       <Button
         title="Register now"
         onPress={() => navigation.navigate('Register')}
       />
-
       <Text>{requestBody.email}</Text>
       <Text>{requestBody.password}</Text>
       {APIResponse.isLoading ? <Loader /> : <Text>Not Loading</Text>}
