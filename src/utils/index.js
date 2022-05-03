@@ -1,2 +1,2 @@
-export * from './AsyncStorage';
+export * from './asyncStorage';
 export * from './PushNotification';
